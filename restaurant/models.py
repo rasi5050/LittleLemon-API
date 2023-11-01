@@ -11,3 +11,5 @@ class Booking(models.Model):
     no_of_guests = models.IntegerField()
     booking_date = models.DateTimeField()
 
+
+
