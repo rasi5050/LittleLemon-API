@@ -20,7 +20,7 @@ from restaurant import views
 from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('restaurant/', include('restaurant.urls')),
+    path('api/', include('restaurant.urls')),
     path('api-auth/', views.UserViewSet.as_view({'get': 'list', 'post': 'create'})),
     path('obtain-token/', obtain_auth_token),
     path('auth/', include('djoser.urls')),
