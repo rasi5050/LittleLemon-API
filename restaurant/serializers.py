@@ -5,8 +5,10 @@ from .models import Menu, Booking
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'email', 'groups']
+        fields = ['username', 'email', 'groups', 'password']
         # fields = '__all__'
+
+        extra_kwargs = {'password': {'write_only': True, 'min_length': 4}}
 
 class MenuSerializer(serializers.ModelSerializer):
     class Meta:

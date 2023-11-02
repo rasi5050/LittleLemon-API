@@ -20,6 +20,7 @@ class UserViewSet(ModelViewSet):
 class MenuItemView(ListCreateAPIView):
     serializer_class = MenuSerializer
     queryset = Menu.objects.all()
+
 class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
     serializer_class = MenuSerializer
     queryset = Menu.objects.all()
@@ -28,5 +29,6 @@ class BookingViewSet(ModelViewSet):
     serializer_class = BookingSerializer
     queryset = Booking.objects.all()
     permission_classes = [IsAuthenticated]
+
 
 
